@@ -1,0 +1,42 @@
+/* Simple responsive stylesheet for TEHKU Tea */
+:root{
+  --green-100: #eaf5e2;
+  --green-200: #d6efd0;
+  --green-300: #bfe0a9;
+  --accent: #6fa86f;
+  --text: #203227;
+  --muted: #556b52;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--green-100); color:var(--text); line-height:1.5}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+.site-header{background:var(--green-200);padding:22px 0;text-align:center;border-bottom:1px solid rgba(0,0,0,0.05)}
+.site-header h1{font-size:28px;letter-spacing:1px}
+.site-header .tagline{color:var(--muted);margin-top:6px;font-size:14px}
+
+.hero{position:relative;text-align:center;padding:20px 0 40px}
+.hero-img{width:100%;height:auto;display:block;border-radius:8px;object-fit:cover}
+.hero-text{position:relative;margin-top:-140px;background:rgba(255,255,255,0.95);display:inline-block;padding:18px 22px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06);max-width:760px;text-align:left}
+.hero-text h2{color:var(--accent);margin-bottom:6px}
+.btn{display:inline-block;margin-top:10px;background:var(--accent);color:white;padding:10px 16px;border-radius:20px;text-decoration:none;font-weight:600}
+
+.produk{padding:28px 0}
+.produk h2{text-align:center;color:var(--accent);margin-bottom:16px}
+.produk-list{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+.produk-item{background:white;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06);width:260px;padding:14px;text-align:center}
+.produk-item img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+.produk-item h3{color:var(--text);margin-top:10px;margin-bottom:6px}
+.produk-item p{color:var(--muted);font-size:14px}
+
+.tentang{padding:20px 0;background:var(--green-200);margin-top:10px;border-radius:8px;text-align:center}
+
+.site-footer{background:var(--green-300);padding:14px 0;margin-top:18px;text-align:center;font-size:14px;color:var(--text)}
+
+/* Responsive adjustments */
+@media (max-width:720px){
+  .hero-text{margin-top:-100px;padding:14px;width:92%}
+  .produk-list{flex-direction:column;align-items:center}
+  .produk-item{width:92%}
+}
